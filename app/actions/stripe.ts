@@ -85,6 +85,18 @@ export async function createRentalCheckoutSession(booking: RentalBooking) {
       },
     ],
     mode: 'payment',
+    payment_intent_data: {
+      shipping: {
+        name: customer.name,
+        address: {
+          line1: customer.addressLine1,
+          line2: customer.addressLine2 || undefined,
+          city: customer.city,
+          postal_code: customer.postcode,
+          country: 'GB',
+        },
+      },
+    },
     metadata: {
       deviceId: booking.deviceId,
       deviceName: device.name,

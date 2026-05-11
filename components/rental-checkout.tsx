@@ -86,7 +86,7 @@ export function RentalCheckout({ booking }: RentalCheckoutProps) {
   }
 
   return (
-    <div id="checkout" className="rounded-lg overflow-hidden">
+    <div id="checkout" className="rounded-lg overflow-hidden" style={{ backgroundColor: 'oklch(0.975 0.005 80)' }}>
       <EmbeddedCheckoutProvider
         stripe={stripePromise}
         options={{ fetchClientSecret, onComplete: () => setPaymentComplete(true) }}
