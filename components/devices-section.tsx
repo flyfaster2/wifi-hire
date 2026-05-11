@@ -26,7 +26,7 @@ const devices = [
   },
   {
     name: "Home Router",
-    tagline: "Home broadband, simplified",
+    tagline: "WiFi for the home",
     description:
       "Plug in and connect your whole household. No landline needed. 5G device capable of broadband speeds. Ideal for temporary accommodation or for gaps in your broadband supply.",
     image: "/images/home-router.jpg",

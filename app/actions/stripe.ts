@@ -47,7 +47,7 @@ export async function createRentalCheckoutSession(booking: RentalBooking) {
   ].filter(Boolean)
 
   const session = await stripe.checkout.sessions.create({
-    ui_mode: 'embedded',
+    ui_mode: 'embedded_page',
     redirect_on_completion: 'never',
     customer_email: customer.email,
     line_items: [

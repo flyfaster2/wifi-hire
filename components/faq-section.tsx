@@ -48,6 +48,11 @@ const faqs = [
     answer:
       "Absolutely not. Our devices use 4G/5G mobile networks, so there's no need for a landline or any installation. Just plug in (Home Router) or switch on (Pocket MiFi) and connect.",
   },
+  {
+    question: "Why do you charge a deposit?",
+    answer:
+      "Unlike cheaper alternatives, we send out premium devices — the same hardware used by businesses. The deposit protects us against loss or damage, and it's fully refunded as soon as the device is returned safely. Better kit means a better connection; the deposit is the trade-off.",
+  },
 ];
 
 export function FAQSection() {

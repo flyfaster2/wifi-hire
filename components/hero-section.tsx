@@ -15,7 +15,7 @@ export function HeroSection() {
               <span className="text-accent">wherever you need it</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Rent a portable WiFi device in seconds. No contracts, no
+              Rent a WiFi device in seconds. No contracts, no
               engineers, no fuss. Just reliable internet delivered to your
               door.
             </p>
@@ -32,7 +32,7 @@ export function HeroSection() {
               </div>
               <div className="flex items-center gap-2">
                 <Check className="w-4 h-4 text-accent" />
-                <span>No contracts</span>
+                <span>Unlimited data</span>
               </div>
             </div>
 
