@@ -18,8 +18,6 @@ const devices = [
       "10-hour battery",
       "Fits in your pocket",
       "Unlimited UK data",
-	"Up to 150mbps",
-	"Unlimited UK data",
     ],
     icon: Zap,
     bestFor: ["Tourists", "Business travellers", "Students"],
