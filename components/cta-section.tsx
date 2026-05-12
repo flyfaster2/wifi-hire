@@ -11,7 +11,7 @@ export function CTASection() {
             Ready to get connected?
           </h2>
           <p className="mt-4 text-lg text-primary-foreground/80 max-w-xl mx-auto">
-            Order now and have your WiFi device delivered tomorrow. No
+            Order now and have your WiFi device delivered fast. No
             contracts, no hassle.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -30,7 +30,7 @@ export function CTASection() {
               size="lg"
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-10"
             >
-              <a href="mailto:hello@hotspothire.co.uk">Contact Us</a>
+              <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>
