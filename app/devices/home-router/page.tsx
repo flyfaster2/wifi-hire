@@ -89,7 +89,7 @@ export default function HomeRouterPage() {
                 5G/4G indoor router with Wi-Fi 6 and four external antennas. Plug it in and connect your entire household — no landline, no engineer, no contracts.
               </p>
               <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-3xl font-semibold text-foreground">From £4.50</span>
+                <span className="text-3xl font-semibold text-foreground">From £7.00</span>
                 <span className="text-muted-foreground">/day</span>
               </div>
               <div className="flex gap-3">

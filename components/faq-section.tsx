@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "How quickly can I get a device?",
     answer:
-      "Next working day delivery is available for £7 on orders placed before 2pm, Mon–Fri. Standard delivery is £5 and arrives the following working day. We deliver Mon–Fri only — weekend orders are processed on Monday.",
+      "We currently have a 2 day lead time on devices. So if you order on a Monday, we can have the device with you by Wednesday. If you need it sooner, just get in touch with us and we'll get back to you as soon as we can. ",
   },
   {
     question: "Do I need to sign a contract?",
@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "How do I return the device?",
     answer:
-      "Simply pop the device back in the prepaid envelope we provide and drop it in any Royal Mail postbox. Returns are completely free.",
+      "Simply pop the device back in the original packaging and drop it back to your local Evri dropoff. Returns are completely free.",
   },
   {
     question: "Is the data truly unlimited?",
@@ -46,12 +46,12 @@ const faqs = [
   {
     question: "Do I need a landline or engineer visit?",
     answer:
-      "Absolutely not. Our devices use 4G/5G mobile networks, so there's no need for a landline or any installation. Just plug in (Home Router) or switch on (Pocket MiFi) and connect.",
+      "Absolutely not. Our devices use 4G/5G mobile networks, so there's no need for a landline or any installation. With our devices, you'll be online in minutes",
   },
   {
     question: "Why do you charge a deposit?",
     answer:
-      "Unlike cheaper alternatives, we send out premium devices — the same hardware used by businesses. The deposit protects us against loss or damage, and it's fully refunded as soon as the device is returned safely. Better kit means a better connection; the deposit is the trade-off.",
+      "Unlike cheaper alternatives, we send out premium devices — the same hardware used by businesses. These devices have better antennas and therefore offer better signal and faster speeds to our customers. The deposit protects us against loss or damage, and it's fully refunded as soon as the device is returned safely.",
   },
 ];
 

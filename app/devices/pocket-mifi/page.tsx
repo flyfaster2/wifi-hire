@@ -84,7 +84,7 @@ export default function PocketMiFiPage() {
                 Compact dual-band 4G mobile hotspot. Fits in your pocket, connects up to 10 devices, and lasts all day on a single charge.
               </p>
               <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-3xl font-semibold text-foreground">From £4.50</span>
+                <span className="text-3xl font-semibold text-foreground">From £5.50</span>
                 <span className="text-muted-foreground">/day</span>
               </div>
               <div className="flex gap-3">

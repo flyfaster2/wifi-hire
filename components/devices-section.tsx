@@ -11,7 +11,7 @@ const devices = [
     description:
       "Compact and portable. Perfect for individuals on the move. Connects up to 10 devices with 4G speeds wherever you go.",
     image: "/images/pocket-mifi.jpg",
-    price: "From £4.50",
+    price: "From £5.50",
     priceNote: "/day for longer hires",
     features: [
       "Up to 10 devices",
@@ -30,7 +30,7 @@ const devices = [
     description:
       "Plug in and connect your whole household. No landline needed. 5G device capable of broadband speeds. Ideal for temporary accommodation or for gaps in your broadband supply.",
     image: "/images/home-router.jpg",
-    price: "From £5.00",
+    price: "From £7.00",
     priceNote: "/day for longer hires",
     features: [
       "Up to 64 devices",

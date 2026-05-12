@@ -7,19 +7,21 @@ const pricingPlans = [
   {
     device: "Pocket MiFi",
     delivery: "£5",
-    plans: [
-      { duration: "3–7 days",  price: "£6.00", perDay: true },
-      { duration: "8–21 days", price: "£5.00", perDay: true, popular: true },
-      { duration: "22+ days",  price: "£4.50", perDay: true },
+    example: "10 days = (7 × £5.50) + (3 × £4.00) = £50.50",
+    bands: [
+      { label: "Days 1–7",  price: "£5.50", popular: false },
+      { label: "Days 8–14", price: "£4.00", popular: true },
+      { label: "Days 15+",  price: "£3.00", popular: false },
     ],
   },
   {
     device: "Home Router",
     delivery: "£8",
-    plans: [
-      { duration: "3–7 days",  price: "£7.50", perDay: true },
-      { duration: "8–21 days", price: "£6.00", perDay: true, popular: true },
-      { duration: "22+ days",  price: "£5.00", perDay: true },
+    example: "10 days = (7 × £7.00) + (3 × £5.50) = £65.50",
+    bands: [
+      { label: "Days 1–7",  price: "£7.00", popular: false },
+      { label: "Days 8–14", price: "£5.50", popular: true },
+      { label: "Days 15+",  price: "£4.00", popular: false },
     ],
   },
 ];
@@ -38,15 +40,19 @@ export function PricingSection() {
     <section id="pricing" className="py-16 sm:py-24 bg-card">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-4 sm:mb-6">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground text-balance">
             Simple pricing, no surprises
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            The longer you hire, the less you pay per day. All plans include
-            unlimited data.
+            The longer you hire, the less you pay. Lower rates apply only to days within that band — like tax brackets.
           </p>
         </div>
+
+        {/* Bracket explanation */}
+        <p className="text-center text-sm text-muted-foreground/80 mb-12 sm:mb-16">
+          Example: a 10-day Pocket MiFi hire = (7 × £5.50) + (3 × £4.00) = <span className="font-medium text-foreground">£50.50</span>
+        </p>
 
         {/* Pricing Tables */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
@@ -61,18 +67,18 @@ export function PricingSection() {
               </div>
               <CardContent className="p-0">
                 <div className="divide-y divide-border">
-                  {devicePlan.plans.map((plan) => (
+                  {devicePlan.bands.map((band) => (
                     <div
-                      key={plan.duration}
+                      key={band.label}
                       className={`flex items-center justify-between p-6 ${
-                        plan.popular ? "bg-accent/5" : ""
+                        band.popular ? "bg-accent/5" : ""
                       }`}
                     >
                       <div className="flex items-center gap-3">
                         <span className="text-foreground font-medium">
-                          {plan.duration}
+                          {band.label}
                         </span>
-                        {plan.popular && (
+                        {band.popular && (
                           <span className="px-2 py-0.5 bg-accent text-accent-foreground text-xs rounded-full">
                             Popular
                           </span>
@@ -80,13 +86,9 @@ export function PricingSection() {
                       </div>
                       <div className="text-right">
                         <span className="text-xl font-semibold text-foreground">
-                          {plan.price}
+                          {band.price}
                         </span>
-                        {plan.perDay && (
-                          <span className="text-muted-foreground text-sm">
-                            /day
-                          </span>
-                        )}
+                        <span className="text-muted-foreground text-sm">/day</span>
                       </div>
                     </div>
                   ))}

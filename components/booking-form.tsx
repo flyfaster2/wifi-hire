@@ -6,7 +6,7 @@ import { Calendar, Wifi, Router, Check, ChevronRight, Info, AlertTriangle } from
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-import { RENTAL_DEVICES, calculateRentalPrice, getDailyRate, formatPrice, type RentalDevice } from '@/lib/products'
+import { RENTAL_DEVICES, calculateRentalPrice, formatPrice, type RentalDevice } from '@/lib/products'
 import type { CustomerDetails } from '@/app/actions/stripe'
 
 function toNextWeekday(date: Date): Date {
@@ -61,6 +61,7 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
   const [selectedDevice, setSelectedDevice] = useState<string | null>(null)
   const [startDate, setStartDate] = useState<string>('')
   const [endDate, setEndDate] = useState<string>('')
+  const [agreedToTerms, setAgreedToTerms] = useState(false)
   const [customer, setCustomer] = useState<CustomerDetails>({
     name: '',
     email: '',
@@ -96,11 +97,9 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
   const pricing = useMemo(() => {
     if (!selectedDeviceData || rentalDays < 1) return null
     const rentalPrice = calculateRentalPrice(selectedDeviceData, rentalDays)
-    const dailyRate = getDailyRate(selectedDeviceData, rentalDays)
     const deposit = selectedDeviceData.depositPence
     return {
       rentalPrice,
-      dailyRate,
       deposit,
       total: rentalPrice + deposit + deliveryCost,
     }
@@ -116,7 +115,7 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
     customer.city.trim() &&
     customer.postcode.trim()
 
-  const canSubmit = datesComplete && customerComplete && !isLoading
+  const canSubmit = datesComplete && customerComplete && agreedToTerms && !isLoading
 
   const setField = (field: keyof CustomerDetails) => (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = field === 'postcode' ? e.target.value.toUpperCase() : e.target.value
@@ -362,9 +361,7 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
                     {format(new Date(startDate + 'T00:00:00'), 'dd MMM yyyy')} – {format(new Date(endDate + 'T00:00:00'), 'dd MMM yyyy')}
                   </p>
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  {formatPrice(pricing.dailyRate)}/day
-                </p>
+                <p className="text-sm text-muted-foreground">{rentalDays} days</p>
               </div>
 
               <div className="border-t border-border pt-4 space-y-2">
@@ -404,6 +401,26 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
             </CardContent>
           </Card>
 
+          <label className="flex items-start gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={agreedToTerms}
+              onChange={(e) => setAgreedToTerms(e.target.checked)}
+              className="mt-1 h-4 w-4 rounded border-border accent-accent flex-shrink-0"
+            />
+            <span className="text-sm text-muted-foreground">
+              I have read and agree to the{' '}
+              <a
+                href="/rental-agreement"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground underline underline-offset-2 hover:text-accent"
+              >
+                rental agreement terms and conditions
+              </a>
+            </span>
+          </label>
+
           <Button
             onClick={handleSubmit}
             disabled={!canSubmit}
@@ -428,7 +445,7 @@ function DeviceCard({
   onSelect: () => void
 }) {
   const Icon = device.id === 'pocket-mifi' ? Wifi : Router
-  const lowestPrice = device.pricing[device.pricing.length - 1].pricePerDayPence
+  const startingPrice = device.pricing[0].pricePerDayPence
 
   return (
     <Card
@@ -457,7 +474,7 @@ function DeviceCard({
             </div>
             <p className="text-sm text-muted-foreground mt-1">{device.shortDescription}</p>
             <p className="text-sm font-medium text-accent mt-2">
-              From {formatPrice(lowestPrice)}/day
+              From {formatPrice(startingPrice)}/day
             </p>
           </div>
         </div>

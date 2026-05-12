@@ -16,6 +16,7 @@ const footerLinks = {
     { name: "About Us", href: "#" },
   ],
   legal: [
+    { name: "Rental Agreement", href: "/rental-agreement" },
     { name: "Privacy Policy", href: "#" },
     { name: "Terms of Service", href: "#" },
     { name: "Cookie Policy", href: "#" },
@@ -33,7 +34,7 @@ export function Footer() {
               <div className="w-8 h-8 bg-accent rounded-full flex items-center justify-center">
                 <Wifi className="w-4 h-4 text-accent-foreground" />
               </div>
-              <span className="text-lg font-semibold">Temp Home WiFi</span>
+              <span className="text-lg font-semibold">FlexiWiFi</span>
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/70 leading-relaxed">
               Temporary WiFi solutions for the UK. No contracts, no fuss.
@@ -113,7 +114,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/70">
-              © 2026 Temp Home WiFi Ltd. All rights reserved.
+              © 2026 FlexiWiFi Ltd. All rights reserved.
             </p>
             <p className="text-sm text-primary-foreground/70">
               Registered in England & Wales

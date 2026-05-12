@@ -18,7 +18,7 @@ export function Header() {
               <Wifi className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
             </div>
             <span className="text-lg sm:text-xl font-semibold text-foreground">
-              Temp Home WiFi
+              FlexiWiFi
             </span>
           </Link>
 
