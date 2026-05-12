@@ -6,8 +6,6 @@ import Link from "next/link";
 const pricingPlans = [
   {
     device: "Pocket MiFi",
-    delivery: "£5",
-    example: "10 days = (7 × £5.50) + (3 × £4.00) = £50.50",
     bands: [
       { label: "Days 1–7",  price: "£5.50", popular: false },
       { label: "Days 8–14", price: "£4.00", popular: true },
@@ -16,8 +14,6 @@ const pricingPlans = [
   },
   {
     device: "Home Router",
-    delivery: "£8",
-    example: "10 days = (7 × £7.00) + (3 × £5.50) = £65.50",
     bands: [
       { label: "Days 1–7",  price: "£7.00", popular: false },
       { label: "Days 8–14", price: "£5.50", popular: true },
@@ -45,14 +41,9 @@ export function PricingSection() {
             Simple pricing, no surprises
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            The longer you hire, the less you pay. Lower rates apply only to days within that band — like tax brackets.
+            Your day rate reduces after day 7 and again after day 14 — lower rates apply only to the days within that band.
           </p>
         </div>
-
-        {/* Bracket explanation */}
-        <p className="text-center text-sm text-muted-foreground/80 mb-12 sm:mb-16">
-          Example: a 10-day Pocket MiFi hire = (7 × £5.50) + (3 × £4.00) = <span className="font-medium text-foreground">£50.50</span>
-        </p>
 
         {/* Pricing Tables */}
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
@@ -61,9 +52,8 @@ export function PricingSection() {
               key={devicePlan.device}
               className="overflow-hidden border-border"
             >
-              <div className="bg-primary text-primary-foreground p-6 flex items-baseline justify-between">
+              <div className="bg-primary text-primary-foreground p-6">
                 <h3 className="text-xl font-semibold">{devicePlan.device}</h3>
-                <span className="text-sm text-primary-foreground/70">Delivery {devicePlan.delivery}</span>
               </div>
               <CardContent className="p-0">
                 <div className="divide-y divide-border">
