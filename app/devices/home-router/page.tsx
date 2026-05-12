@@ -63,6 +63,16 @@ const highlights = [
   { icon: Signal, label: "4G & 5G", sub: "With 4G fallback" },
 ];
 
+export const metadata = {
+  title: 'Home Router Hire UK | 5G WiFi Rental | FlexiWiFi',
+  description: 'Hire a 5G home router in the UK from £7.00/day. Unlimited data, connects up to 64 devices, no landline needed. No contracts. Fast delivery, free returns.',
+  openGraph: {
+    title: 'Home Router Hire UK | 5G WiFi Rental | FlexiWiFi',
+    description: 'Hire a 5G home router in the UK from £7.00/day. Unlimited data, connects up to 64 devices, no landline needed. No contracts.',
+    url: 'https://www.flexiwifi.co.uk/devices/home-router',
+  },
+}
+
 export default function HomeRouterPage() {
   return (
     <div className="min-h-screen bg-background">

@@ -58,6 +58,16 @@ const highlights = [
   { icon: Zap, label: "300 Mbps", sub: "Peak download" },
 ];
 
+export const metadata = {
+  title: 'Pocket MiFi Hire UK | Portable WiFi Rental | FlexiWiFi',
+  description: 'Hire a pocket MiFi in the UK from £5.50/day. Unlimited data, 10-hour battery, connects up to 10 devices. No contracts. Fast delivery, free returns.',
+  openGraph: {
+    title: 'Pocket MiFi Hire UK | Portable WiFi Rental | FlexiWiFi',
+    description: 'Hire a pocket MiFi in the UK from £5.50/day. Unlimited data, 10-hour battery, connects up to 10 devices. No contracts.',
+    url: 'https://www.flexiwifi.co.uk/devices/pocket-mifi',
+  },
+}
+
 export default function PocketMiFiPage() {
   return (
     <div className="min-h-screen bg-background">

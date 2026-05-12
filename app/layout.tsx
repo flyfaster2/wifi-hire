@@ -16,8 +16,20 @@ const dmSerif = DM_Serif_Display({
 
 export const metadata: Metadata = {
   title: 'FlexiWiFi | Flexible WiFi Rentals – Portable & Home',
-  description: 'Rent portable WiFi devices in the UK. No contracts, no installation. Next-day delivery, freepost returns. Perfect for moving home, tourists, or remote workers.',
-  generator: 'v0.app',
+  description: 'Rent portable WiFi devices in the UK. No contracts, no installation. Fast delivery, free returns. Perfect for moving home, tourists, or remote workers.',
+  openGraph: {
+    title: 'FlexiWiFi | Flexible WiFi Rentals – Portable & Home',
+    description: 'Rent portable WiFi devices in the UK. No contracts, no installation. Fast delivery, free returns.',
+    url: 'https://www.flexiwifi.co.uk',
+    siteName: 'FlexiWiFi',
+    locale: 'en_GB',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FlexiWiFi | Flexible WiFi Rentals – Portable & Home',
+    description: 'Rent portable WiFi devices in the UK. No contracts, no installation. Fast delivery, free returns.',
+  },
   icons: {
     icon: [
       {

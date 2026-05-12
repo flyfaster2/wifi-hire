@@ -38,10 +38,10 @@ export function PricingSection() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-4 sm:mb-6">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-foreground text-balance">
-            Simple pricing, no surprises
+            Total Flexibility. Zero Commitment.
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Your day rate reduces after day 7 and again after day 14 — lower rates apply only to the days within that band.
+            Only need it until your fibre is installed? Great. Our rates drop after week one, and if you finish early, just send it back. We&apos;ll recalculate your bill at the best rate and refund your deposit same-day.
           </p>
         </div>
 

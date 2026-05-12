@@ -85,9 +85,11 @@ export async function createRentalCheckoutSession(booking: RentalBooking) {
       },
     ],
     mode: 'payment',
+    phone_number_collection: { enabled: false },
     payment_intent_data: {
       shipping: {
         name: customer.name,
+        phone: customer.phone,
         address: {
           line1: customer.addressLine1,
           line2: customer.addressLine2 || undefined,
