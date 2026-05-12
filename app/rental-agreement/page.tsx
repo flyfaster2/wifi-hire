@@ -46,7 +46,7 @@ export default function RentalAgreementPage() {
           <section className="space-y-3">
             <h2 className="font-serif text-2xl text-foreground">3. Rental Period & Charges</h2>
             <p className="text-muted-foreground leading-relaxed">
-              The rental period begins on your selected delivery date and ends on the date we receive the device back. Pricing is tiered — lower day rates apply only to days within that band, not retroactively to all days. A minimum hire period of 3 days applies.
+              The rental period begins on your selected delivery date and ends on the date the device is posted back to us. Pricing is tiered — lower day rates apply only to days within that band, not retroactively to all days. A minimum hire period of 3 days applies.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               If you return the device before your estimated return date, we will refund the unused days (subject to the 3-day minimum). The postmark or Evri drop-off date is used to determine the return date.
@@ -59,10 +59,12 @@ export default function RentalAgreementPage() {
           <section className="space-y-3">
             <h2 className="font-serif text-2xl text-foreground">4. Deposit</h2>
             <p className="text-muted-foreground leading-relaxed">
-              A refundable deposit is charged at the time of payment. This deposit is held as security against loss, theft, or damage beyond fair wear and tear. The deposit will be refunded in full within 3–5 working days of us receiving the device back in good condition.
+              A refundable deposit is charged at the time of payment. This deposit is held as security against loss, theft, or damage beyond fair wear and tear. The deposit will be refunded in full within 3–5 working days of us receiving the device back in good condition. Please note that it may take up to 10 working days to show on your account.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              If the device is returned damaged, we reserve the right to deduct the reasonable cost of repair or replacement from the deposit. If the device is not returned, the deposit will be retained in full and we may pursue further recovery of costs.
+              If the device or it's accessories (including but not limited to: cables, batteries, sim card) are not returned or are returned damaged, we reserve the right to deduct the reasonable cost of repair or replacement from the deposit. If the the deposit does not cover the full extent of the damage or replacement, the deposit will be retained in full and we may pursue further recovery of costs.
+
+We ask for a £50 deposit for Pocket MiFi devices and £75 for our Home Routers.
             </p>
           </section>
 
@@ -76,7 +78,7 @@ export default function RentalAgreementPage() {
           <section className="space-y-3">
             <h2 className="font-serif text-2xl text-foreground">6. Returns</h2>
             <p className="text-muted-foreground leading-relaxed">
-              You are responsible for returning the device using the prepaid Evri returns label provided. The device must be adequately packaged to prevent damage in transit. We recommend retaining your proof of postage until your deposit has been refunded.
+              You are responsible for returning the device using the prepaid Evri returns label provided. The device must be returned in it's original packaging to prevent damage in transit. We recommend retaining your proof of postage until your deposit has been refunded.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               If you lose the return label, please contact us and we will arrange a replacement. We cannot accept liability for devices lost in return transit where proof of postage cannot be provided.
@@ -93,7 +95,9 @@ export default function RentalAgreementPage() {
           <section className="space-y-3">
             <h2 className="font-serif text-2xl text-foreground">8. Loss, Theft & Damage</h2>
             <p className="text-muted-foreground leading-relaxed">
-              You are responsible for the device from the moment of delivery until we receive it back. In the event of theft, please obtain a crime reference number and notify us immediately. We reserve the right to charge for the full replacement cost of a device that is lost, stolen, or damaged beyond repair.
+              You are responsible for the device from the moment of delivery until it has been dropped off with our courier. In the event of theft, please obtain a crime reference number and notify us immediately. We reserve the right to charge for the full replacement cost of a device that is lost, stolen, or damaged beyond repair.
+
+If the device arrives or becomes faulty, you should notify us as soon as possible and we will arrange a replacement.
             </p>
           </section>
 
@@ -103,7 +107,7 @@ export default function RentalAgreementPage() {
               We are not liable for any loss of business, revenue, profits, or data arising from the use of or inability to use the device or network service. Our total liability to you shall not exceed the total amount paid by you for the rental.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              We do not guarantee specific download or upload speeds, as these depend on network coverage and conditions at your location.
+              We do not guarantee signal or specific download or upload speeds, as these depend on network coverage and conditions at your location.
             </p>
           </section>
 

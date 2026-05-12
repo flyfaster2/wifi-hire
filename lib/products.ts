@@ -44,7 +44,7 @@ export const RENTAL_DEVICES: RentalDevice[] = [
     description: 'Powerful home router with external antennas for maximum signal. Just plug in and connect your whole household.',
     features: [
       'Up to 64 device connections',
-      'External antennas for best signal',
+      '5G Connectivity',
       'Unlimited UK data',
       'Ethernet port for wired connection',
     ],

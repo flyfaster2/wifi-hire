@@ -15,7 +15,7 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'FlexiWiFi | Temporary WiFi Device Rental UK',
+  title: 'FlexiWiFi | Flexible WiFi Rentals – Portable & Home',
   description: 'Rent portable WiFi devices in the UK. No contracts, no installation. Next-day delivery, freepost returns. Perfect for moving home, tourists, or remote workers.',
   generator: 'v0.app',
   icons: {
