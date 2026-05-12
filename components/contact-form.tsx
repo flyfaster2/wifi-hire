@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { 
+import {
   Select,
   SelectContent,
   SelectItem,
@@ -13,20 +13,37 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { CheckCircle } from "lucide-react";
+import { sendContactEmail } from "@/app/actions/contact";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [subject, setSubject] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission - replace with actual form handling
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    setSubmitted(true);
-    setIsSubmitting(false);
+    setError(null);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      await sendContactEmail({
+        firstName: data.get("firstName") as string,
+        lastName: data.get("lastName") as string,
+        email: data.get("email") as string,
+        subject,
+        orderNumber: data.get("orderNumber") as string,
+        message: data.get("message") as string,
+      });
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again or email us directly at hello@flexiwifi.co.uk.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -48,38 +65,22 @@ export function ContactForm() {
       <div className="grid sm:grid-cols-2 gap-4">
         <div className="space-y-2">
           <Label htmlFor="firstName">First name</Label>
-          <Input 
-            id="firstName" 
-            name="firstName" 
-            required 
-            placeholder="John"
-          />
+          <Input id="firstName" name="firstName" required placeholder="John" />
         </div>
         <div className="space-y-2">
           <Label htmlFor="lastName">Last name</Label>
-          <Input 
-            id="lastName" 
-            name="lastName" 
-            required 
-            placeholder="Smith"
-          />
+          <Input id="lastName" name="lastName" required placeholder="Smith" />
         </div>
       </div>
 
       <div className="space-y-2">
         <Label htmlFor="email">Email</Label>
-        <Input 
-          id="email" 
-          name="email" 
-          type="email" 
-          required 
-          placeholder="john@example.com"
-        />
+        <Input id="email" name="email" type="email" required placeholder="john@example.com" />
       </div>
 
       <div className="space-y-2">
         <Label htmlFor="subject">What can we help with?</Label>
-        <Select name="subject" required>
+        <Select name="subject" required value={subject} onValueChange={setSubject}>
           <SelectTrigger>
             <SelectValue placeholder="Select a topic" />
           </SelectTrigger>
@@ -95,28 +96,22 @@ export function ContactForm() {
 
       <div className="space-y-2">
         <Label htmlFor="orderNumber">Order number (optional)</Label>
-        <Input 
-          id="orderNumber" 
-          name="orderNumber" 
-          placeholder="e.g. HS-12345"
-        />
+        <Input id="orderNumber" name="orderNumber" placeholder="e.g. HS-12345" />
       </div>
 
       <div className="space-y-2">
         <Label htmlFor="message">Message</Label>
-        <Textarea 
-          id="message" 
-          name="message" 
-          required 
-          rows={5}
-          placeholder="Tell us how we can help..."
-        />
+        <Textarea id="message" name="message" required rows={5} placeholder="Tell us how we can help..." />
       </div>
 
-      <Button 
-        type="submit" 
+      {error && (
+        <p className="text-sm text-destructive">{error}</p>
+      )}
+
+      <Button
+        type="submit"
         className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
-        disabled={isSubmitting}
+        disabled={isSubmitting || !subject}
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
