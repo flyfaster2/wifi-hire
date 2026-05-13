@@ -88,7 +88,7 @@ export default function PocketMiFiPage() {
             <div>
               <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">Pocket MiFi</p>
               <h1 className="font-serif text-4xl sm:text-5xl text-foreground mb-4">
-                TP-Link M7352
+                Pocket MiFi
               </h1>
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
                 Compact dual-band 4G mobile hotspot. Fits in your pocket, connects up to 10 devices, and lasts all day on a single charge.
@@ -109,8 +109,8 @@ export default function PocketMiFiPage() {
 
             <div className="aspect-[4/3] relative rounded-2xl overflow-hidden bg-secondary">
               <Image
-                src="/images/pocket-mifi.jpg"
-                alt="TP-Link M7352 Pocket MiFi"
+                src="/images/pocket-mifi.png"
+                alt="Pocket MiFi"
                 fill
                 className="object-cover"
               />
@@ -191,7 +191,7 @@ export default function PocketMiFiPage() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-4 text-left mb-10">
             {[
-              "TP-Link M7352 device, pre-configured and ready to use",
+              "Pocket MiFi device, pre-configured and ready to use",
               "SIM card with unlimited UK data",
               "USB-C charging cable",
               "Quick-start guide",

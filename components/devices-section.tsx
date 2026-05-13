@@ -10,7 +10,7 @@ const devices = [
     tagline: "WiFi in your pocket",
     description:
       "Compact and portable. Perfect for individuals on the move. Connects up to 10 devices with 4G speeds wherever you go.",
-    image: "/images/pocket-mifi.jpg",
+    image: "/images/pocket-mifi.png",
     price: "From £5.50",
     priceNote: "/day for longer hires",
     features: [

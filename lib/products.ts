@@ -30,7 +30,7 @@ export const RENTAL_DEVICES: RentalDevice[] = [
     ],
     depositPence: 5000,
     deliveryCostPence: 500,
-    image: '/images/pocket-mifi.jpg',
+    image: '/images/pocket-mifi.png',
     pricing: [
       { label: 'Days 1–7',  bandDays: 7,    pricePerDayPence: 550 },
       { label: 'Days 8–14', bandDays: 7,    pricePerDayPence: 400 },

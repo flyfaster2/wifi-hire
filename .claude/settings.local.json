@@ -4,7 +4,9 @@
       "Bash(npx tsc *)",
       "Bash(npm install *)",
       "Bash(npm list *)",
-      "Bash(pnpm add *)"
+      "Bash(pnpm add *)",
+      "Bash(Copy-Item \"C:\\\\Users\\\\billy\\\\OneDrive\\\\Documents\\\\GitHub\\\\wifi-hire\\\\images\\\\pocket-mifi.jpg\" -Destination \"C:\\\\Users\\\\billy\\\\OneDrive\\\\Documents\\\\GitHub\\\\wifi-hire\\\\public\\\\images\\\\pocket-mifi.jpg\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\billy\\\\OneDrive\\\\Documents\\\\GitHub\\\\wifi-hire\\\\images\\\\pocket-mifi.png\" \"C:\\\\Users\\\\billy\\\\OneDrive\\\\Documents\\\\GitHub\\\\wifi-hire\\\\public\\\\images\\\\pocket-mifi.png\" -Force)"
     ]
   }
 }

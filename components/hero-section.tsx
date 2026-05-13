@@ -59,7 +59,7 @@ export function HeroSection() {
             {/* MiFi Device */}
             <div className="relative w-40 sm:w-48 lg:w-56 aspect-square rounded-2xl overflow-hidden shadow-xl bg-secondary">
               <Image
-                src="/images/pocket-mifi.jpg"
+                src="/images/pocket-mifi.png"
                 alt="Pocket MiFi device"
                 fill
                 className="object-cover"
@@ -75,26 +75,6 @@ export function HeroSection() {
                 className="object-cover"
                 priority
               />
-            </div>
-            {/* Floating Card */}
-            <div className="absolute -bottom-6 left-0 bg-card p-4 rounded-xl shadow-lg border border-border max-w-[200px] hidden sm:block">
-              <p className="text-sm font-medium text-foreground">
-                Trusted by 50,000+ customers
-              </p>
-              <div className="flex gap-1 mt-2">
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-4 h-4 text-accent fill-current"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-xs text-muted-foreground mt-1">
-                4.9 out of 5 stars
-              </p>
             </div>
           </div>
         </div>

@@ -93,7 +93,7 @@ export default function HomeRouterPage() {
             <div>
               <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">Home Router</p>
               <h1 className="font-serif text-4xl sm:text-5xl text-foreground mb-4">
-                Zyxel NR5103E
+                Home Router
               </h1>
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
                 5G/4G indoor router with Wi-Fi 6 and four external antennas. Plug it in and connect your entire household — no landline, no engineer, no contracts.
@@ -115,7 +115,7 @@ export default function HomeRouterPage() {
             <div className="aspect-[4/3] relative rounded-2xl overflow-hidden bg-secondary">
               <Image
                 src="/images/home-router.jpg"
-                alt="Zyxel NR5103E Home Router"
+                alt="Home Router"
                 fill
                 className="object-cover"
               />
@@ -161,7 +161,7 @@ export default function HomeRouterPage() {
           <div className="bg-secondary/60 rounded-2xl px-6 py-5">
             <h2 className="font-semibold text-foreground mb-2">Coverage in your area</h2>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              The NR5103E supports 4G and 5G across the UK. Before dispatch, we check coverage at your delivery postcode and select the best network — whether that&apos;s EE, Vodafone, or Three — to ensure you get the strongest possible signal. In 4G-only areas the router falls back gracefully and still delivers excellent speeds.
+              Our home router supports 4G and 5G across the UK. Before dispatch, we check coverage at your delivery postcode and select the best SIM for your area to ensure you get the strongest possible signal. In 4G-only areas the router falls back gracefully and still delivers excellent speeds.
             </p>
           </div>
         </div>
@@ -208,7 +208,7 @@ export default function HomeRouterPage() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-4 text-left mb-10">
             {[
-              "Zyxel NR5103E router, pre-configured and ready to use",
+              "Home router, pre-configured and ready to use",
               "SIM card with unlimited UK data",
               "Power adapter (UK plug)",
               "4 external antennas (pre-attached)",
