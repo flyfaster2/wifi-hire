@@ -6,6 +6,7 @@ import { Mail, MessageCircle, Phone } from "lucide-react";
 export const metadata = {
   title: "Contact Us | FlexiWiFi",
   description: "Get in touch with FlexiWiFi. Available 7 days a week, 9am–8pm.",
+  alternates: { canonical: 'https://www.flexiwifi.co.uk/contact' },
 };
 
 export default function ContactPage() {

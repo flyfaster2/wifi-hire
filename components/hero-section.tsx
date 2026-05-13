@@ -62,6 +62,7 @@ export function HeroSection() {
                 src="/images/pocket-mifi.png"
                 alt="Pocket MiFi device"
                 fill
+                sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 224px"
                 className="object-cover"
                 priority
               />
@@ -72,6 +73,7 @@ export function HeroSection() {
                 src="/images/home-router.jpg"
                 alt="Home Router device"
                 fill
+                sizes="(max-width: 640px) 176px, (max-width: 1024px) 208px, 256px"
                 className="object-cover"
                 priority
               />

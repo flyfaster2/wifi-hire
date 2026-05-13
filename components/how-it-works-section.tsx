@@ -26,7 +26,7 @@ const steps = [
     number: "04",
     title: "Return freepost",
     description:
-      "Pop it in the prepaid envelope when you're done. No printer required! Drop at any DPD dropoff point.",
+      "Pop it in the prepaid envelope when you're done. No printer required. Drop at any Evri dropoff point.",
     icon: MailOpen,
   },
 ];
@@ -49,13 +49,13 @@ export function HowItWorksSection() {
         {/* Steps */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {steps.map((step, index) => (
-            <div key={step.number} className="relative group">
+            <div key={step.number} className="relative group flex flex-col">
               {/* Connector Line (hidden on mobile and last item) */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-12 left-1/2 w-full h-px bg-border" />
               )}
 
-              <div className="relative bg-card rounded-2xl p-6 sm:p-8 border border-border group-hover:border-accent/30 transition-colors">
+              <div className="relative bg-card rounded-2xl p-6 sm:p-8 border border-border group-hover:border-accent/30 transition-colors flex flex-col flex-1">
                 {/* Icon */}
                 <div className="w-14 h-14 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
                   <step.icon className="w-6 h-6 text-accent" />

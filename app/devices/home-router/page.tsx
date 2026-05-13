@@ -66,6 +66,7 @@ const highlights = [
 export const metadata = {
   title: 'Home Router Hire UK | 5G WiFi Rental | FlexiWiFi',
   description: 'Hire a 5G home router in the UK from £7.00/day. Unlimited data, connects up to 64 devices, no landline needed. No contracts. Fast delivery, free returns.',
+  alternates: { canonical: 'https://www.flexiwifi.co.uk/devices/home-router' },
   openGraph: {
     title: 'Home Router Hire UK | 5G WiFi Rental | FlexiWiFi',
     description: 'Hire a 5G home router in the UK from £7.00/day. Unlimited data, connects up to 64 devices, no landline needed. No contracts.',
@@ -73,9 +74,31 @@ export const metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Home Router Hire',
+  description: '5G/4G indoor router with Wi-Fi 6. Plug it in and connect your entire household — no landline, no engineer, no contracts. Unlimited UK data included.',
+  brand: { '@type': 'Brand', name: 'FlexiWiFi' },
+  offers: {
+    '@type': 'AggregateOffer',
+    lowPrice: '4.00',
+    highPrice: '7.00',
+    priceCurrency: 'GBP',
+    offerCount: '1',
+    offers: [
+      { '@type': 'Offer', name: 'Days 1–7', price: '7.00', priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: '7.00', priceCurrency: 'GBP', unitText: 'DAY' } },
+      { '@type': 'Offer', name: 'Days 8–14', price: '5.50', priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: '5.50', priceCurrency: 'GBP', unitText: 'DAY' } },
+      { '@type': 'Offer', name: 'Days 15+', price: '4.00', priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: '4.00', priceCurrency: 'GBP', unitText: 'DAY' } },
+    ],
+  },
+  url: 'https://www.flexiwifi.co.uk/devices/home-router',
+}
+
 export default function HomeRouterPage() {
   return (
     <div className="min-h-screen bg-background">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
 
       {/* Hero */}
@@ -117,6 +140,7 @@ export default function HomeRouterPage() {
                 src="/images/home-router.jpg"
                 alt="Home Router"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

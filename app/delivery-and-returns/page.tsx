@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 export const metadata = {
   title: "Delivery & Returns | FlexiWiFi",
   description: "Everything you need to know about FlexiWiFi delivery and returns.",
+  alternates: { canonical: 'https://www.flexiwifi.co.uk/delivery-and-returns' },
 };
 
 export default function DeliveryAndReturnsPage() {

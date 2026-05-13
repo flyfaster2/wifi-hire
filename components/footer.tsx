@@ -6,6 +6,12 @@ const footerLinks = {
     { name: "Pocket MiFi", href: "/devices/pocket-mifi" },
     { name: "Home Router", href: "/devices/home-router" },
   ],
+  useCases: [
+    { name: "Moving House", href: "/wifi-hire-moving-house" },
+    { name: "Temporary Broadband", href: "/temporary-broadband-uk" },
+    { name: "Visiting the UK", href: "/wifi-hire-visiting-uk" },
+    { name: "Remote Working", href: "/wifi-hire-remote-working" },
+  ],
   support: [
     { name: "Contact Us", href: "/contact" },
     { name: "Delivery & Returns", href: "/delivery-and-returns" },
@@ -22,7 +28,7 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2">
@@ -42,10 +48,21 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                  >
+                  <Link href={link.href} className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Use Cases */}
+          <div>
+            <h4 className="font-semibold mb-4">Use Cases</h4>
+            <ul className="space-y-3">
+              {footerLinks.useCases.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -59,10 +76,7 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                  >
+                  <Link href={link.href} className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -76,10 +90,7 @@ export function Footer() {
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                  >
+                  <Link href={link.href} className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {link.name}
                   </Link>
                 </li>

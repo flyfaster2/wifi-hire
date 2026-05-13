@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 export const metadata = {
   title: "Cookie Policy | FlexiWiFi",
   description: "How FlexiWiFi uses cookies on its website.",
+  alternates: { canonical: 'https://www.flexiwifi.co.uk/cookie-policy' },
 };
 
 export default function CookiePolicyPage() {

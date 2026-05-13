@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 export const metadata = {
   title: "Privacy Policy | FlexiWiFi",
   description: "How FlexiWiFi collects, uses, and protects your personal data.",
+  alternates: { canonical: 'https://www.flexiwifi.co.uk/privacy-policy' },
 };
 
 export default function PrivacyPolicyPage() {

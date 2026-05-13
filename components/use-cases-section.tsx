@@ -1,4 +1,5 @@
-import { Home, Plane, Briefcase, Signal } from "lucide-react";
+import Link from "next/link";
+import { Home, Plane, Briefcase, Signal, ArrowRight } from "lucide-react";
 
 const useCases = [
   {
@@ -6,24 +7,28 @@ const useCases = [
     title: "Moving home",
     description:
       "Bridge the gap between broadband contracts. Stay connected while you wait for your new provider.",
+    href: "/wifi-hire-moving-house",
   },
   {
     icon: Plane,
     title: "Visiting the UK",
     description:
       "Tourists and visitors get instant connectivity without expensive roaming charges.",
+    href: "/wifi-hire-visiting-uk",
   },
   {
     icon: Signal,
-    title: "When your phone signal isn't enough",
+    title: "Waiting for broadband",
     description:
-      "Dedicated antennas and hardware often pick up signal where phones can't — ideal for rural areas, thick walls, or poor indoor reception.",
+      "Fibre installation taking weeks? A hired device keeps you fully connected in the meantime — no contracts.",
+    href: "/temporary-broadband-uk",
   },
   {
     icon: Briefcase,
     title: "Remote working",
     description:
       "Short-term rentals, Airbnbs, or co-living spaces. Reliable WiFi for work anywhere.",
+    href: "/wifi-hire-remote-working",
   },
 ];
 
@@ -45,9 +50,10 @@ export function UseCasesSection() {
         {/* Use Case Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {useCases.map((useCase) => (
-            <div
+            <Link
               key={useCase.title}
-              className="bg-card rounded-2xl p-6 border border-border hover:border-accent/30 transition-colors group"
+              href={useCase.href}
+              className="bg-card rounded-2xl p-6 border border-border hover:border-accent/30 transition-colors group flex flex-col"
             >
               <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-accent/10 transition-colors">
                 <useCase.icon className="w-6 h-6 text-accent" />
@@ -55,10 +61,13 @@ export function UseCasesSection() {
               <h3 className="text-lg font-semibold text-foreground mb-2">
                 {useCase.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-muted-foreground text-sm leading-relaxed flex-1">
                 {useCase.description}
               </p>
-            </div>
+              <div className="flex items-center gap-1 mt-4 text-sm text-accent font-medium">
+                Learn more <ArrowRight className="w-3 h-3" />
+              </div>
+            </Link>
           ))}
         </div>
       </div>

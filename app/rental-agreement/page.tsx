@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 export const metadata = {
   title: "Rental Agreement | FlexiWiFi",
   description: "FlexiWiFi rental agreement terms and conditions.",
+  alternates: { canonical: 'https://www.flexiwifi.co.uk/rental-agreement' },
 };
 
 export default function RentalAgreementPage() {

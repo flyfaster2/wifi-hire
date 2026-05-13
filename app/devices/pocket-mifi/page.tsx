@@ -61,6 +61,7 @@ const highlights = [
 export const metadata = {
   title: 'Pocket MiFi Hire UK | Portable WiFi Rental | FlexiWiFi',
   description: 'Hire a pocket MiFi in the UK from £5.50/day. Unlimited data, 10-hour battery, connects up to 10 devices. No contracts. Fast delivery, free returns.',
+  alternates: { canonical: 'https://www.flexiwifi.co.uk/devices/pocket-mifi' },
   openGraph: {
     title: 'Pocket MiFi Hire UK | Portable WiFi Rental | FlexiWiFi',
     description: 'Hire a pocket MiFi in the UK from £5.50/day. Unlimited data, 10-hour battery, connects up to 10 devices. No contracts.',
@@ -68,9 +69,31 @@ export const metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Pocket MiFi Hire',
+  description: 'Compact dual-band 4G mobile hotspot. Fits in your pocket, connects up to 10 devices, and lasts all day on a single charge. Unlimited UK data included.',
+  brand: { '@type': 'Brand', name: 'FlexiWiFi' },
+  offers: {
+    '@type': 'AggregateOffer',
+    lowPrice: '3.00',
+    highPrice: '5.50',
+    priceCurrency: 'GBP',
+    offerCount: '1',
+    offers: [
+      { '@type': 'Offer', name: 'Days 1–7', price: '5.50', priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: '5.50', priceCurrency: 'GBP', unitText: 'DAY' } },
+      { '@type': 'Offer', name: 'Days 8–14', price: '4.00', priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: '4.00', priceCurrency: 'GBP', unitText: 'DAY' } },
+      { '@type': 'Offer', name: 'Days 15+', price: '3.00', priceCurrency: 'GBP', priceSpecification: { '@type': 'UnitPriceSpecification', price: '3.00', priceCurrency: 'GBP', unitText: 'DAY' } },
+    ],
+  },
+  url: 'https://www.flexiwifi.co.uk/devices/pocket-mifi',
+}
+
 export default function PocketMiFiPage() {
   return (
     <div className="min-h-screen bg-background">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
 
       {/* Hero */}
@@ -112,6 +135,7 @@ export default function PocketMiFiPage() {
                 src="/images/pocket-mifi.png"
                 alt="Pocket MiFi"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
