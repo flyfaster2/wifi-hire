@@ -126,6 +126,13 @@ export default function DeliveryAndReturnsPage() {
               </ol>
             </div>
 
+            <div className="bg-primary/5 border border-primary/15 rounded-xl px-5 py-4">
+              <p className="text-sm font-semibold text-foreground mb-1">Why we use Evri dropoff — not a post box</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                When you drop your device at an Evri point, you get a scan receipt — proof that it left your hands. We can track the parcel from that moment. If anything goes wrong in transit after that, it's on Evri, not you. Your deposit is safe the moment you get that receipt.
+              </p>
+            </div>
+
             <p className="text-sm text-muted-foreground leading-relaxed rounded-lg bg-secondary px-4 py-3 border border-border">
               The postmark date on your return is used to calculate when your rental ends — so the clock stops as soon as you drop it off, not when we receive it.
             </p>

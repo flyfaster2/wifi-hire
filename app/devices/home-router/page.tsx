@@ -137,7 +137,7 @@ export default function HomeRouterPage() {
 
             <div className="aspect-[4/3] relative rounded-2xl overflow-hidden bg-secondary">
               <Image
-                src="/images/home-router.jpg"
+                src="/images/home-router.png"
                 alt="Home Router"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

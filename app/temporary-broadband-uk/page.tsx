@@ -72,7 +72,7 @@ export default function TemporaryBroadbandPage() {
             <div className="relative flex justify-center lg:justify-end">
               <div className="relative w-72 sm:w-80 lg:w-96 aspect-square rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/home-router.jpg"
+                  src="/images/home-router.png"
                   alt="Home WiFi Router"
                   fill
                   sizes="(max-width: 640px) 288px, (max-width: 1024px) 320px, 384px"

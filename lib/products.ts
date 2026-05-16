@@ -50,7 +50,7 @@ export const RENTAL_DEVICES: RentalDevice[] = [
     ],
     depositPence: 7500,
     deliveryCostPence: 800,
-    image: '/images/home-router.jpg',
+    image: '/images/home-router.png',
     pricing: [
       { label: 'Days 1–7',  bandDays: 7,    pricePerDayPence: 700 },
       { label: 'Days 8–14', bandDays: 7,    pricePerDayPence: 550 },

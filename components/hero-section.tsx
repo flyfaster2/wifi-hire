@@ -70,7 +70,7 @@ export function HeroSection() {
             {/* Home Router */}
             <div className="relative w-44 sm:w-52 lg:w-64 aspect-square rounded-2xl overflow-hidden shadow-xl bg-secondary -mt-8">
               <Image
-                src="/images/home-router.jpg"
+                src="/images/home-router.png"
                 alt="Home Router device"
                 fill
                 sizes="(max-width: 640px) 176px, (max-width: 1024px) 208px, 256px"
