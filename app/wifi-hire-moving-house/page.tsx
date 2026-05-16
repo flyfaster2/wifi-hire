@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer";
 
 export const metadata = {
   title: 'WiFi Hire for Moving House UK | Temporary Broadband | FlexiWiFi',
-  description: 'Moving house and need internet fast? Hire a WiFi device from £5.50/day. No contracts, no engineers. Delivered to your new address, free returns.',
+  description: 'Moving house and need internet fast? Hire a portable WiFi or temporary home WiFi device from £5.50/day. No contracts, no engineers. Delivered to your new address, free returns.',
   alternates: { canonical: 'https://www.flexiwifi.co.uk/wifi-hire-moving-house' },
   openGraph: {
     title: 'WiFi Hire for Moving House UK | Temporary Broadband | FlexiWiFi',
@@ -91,7 +91,7 @@ export default function MovingHousePage() {
           <div className="space-y-4 text-muted-foreground text-base leading-relaxed">
             <p>When you move into a new home, getting broadband connected rarely happens overnight. Engineer appointments get booked weeks out. Your chosen provider might need to activate a line. And if you're moving to a new area, switching providers means starting from scratch.</p>
             <p>In the meantime, you're stuck hotspotting off your phone — burning through your data allowance, struggling with slow speeds when multiple people need to connect, and dealing with the stress of it all on top of an already hectic move.</p>
-            <p>A hired WiFi device bridges that gap cleanly. No commitment, no installation, no fuss — just internet when you need it.</p>
+            <p>A hired WiFi device bridges that gap cleanly. No commitment, no installation, no fuss — just temporary home WiFi when you need it most. Whether you call it internet when moving house, a broadband bridge, or just not wanting to go without — it's the same simple solution.</p>
           </div>
           <div className="mt-8 bg-primary/5 border border-primary/15 rounded-2xl px-6 py-5">
             <h3 className="font-semibold text-foreground mb-2">Better than using your phone as a hotspot</h3>
@@ -127,7 +127,7 @@ export default function MovingHousePage() {
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="bg-card border border-border rounded-2xl p-6">
               <h3 className="font-semibold text-foreground text-lg mb-1">Pocket MiFi</h3>
-              <p className="text-sm text-muted-foreground mb-4">From £5.50/day</p>
+              <p className="text-sm text-muted-foreground mb-4">£5.50/day, down to £3.00 for longer hires</p>
               <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                 {["Connects up to 10 devices", "4G speeds", "Battery powered — use on the go", "Great for 1–2 people", "Unlimited data"].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-4 h-4 text-accent flex-shrink-0" />{f}</li>
@@ -140,7 +140,7 @@ export default function MovingHousePage() {
             <div className="bg-card border-2 border-primary rounded-2xl p-6 relative">
               <div className="absolute -top-3 left-6 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">Recommended</div>
               <h3 className="font-semibold text-foreground text-lg mb-1">Home Router</h3>
-              <p className="text-sm text-muted-foreground mb-4">From £7.00/day</p>
+              <p className="text-sm text-muted-foreground mb-4">£7.00/day, down to £4.00 for longer hires</p>
               <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                 {["Connects 64+ devices", "4G & 5G capable", "Ethernet port for wired connection", "Designed for whole-home use", "Unlimited data"].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-4 h-4 text-accent flex-shrink-0" />{f}</li>

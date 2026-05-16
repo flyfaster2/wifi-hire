@@ -11,7 +11,7 @@ import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: 'WiFi Hire UK | Portable & Home Router Rental | FlexiWiFi',
-  description: 'Hire a WiFi device in the UK with no contracts and no engineers. Pocket MiFi or Home Router delivered fast, with free returns. Perfect for moving home, working remotely, or visiting the UK.',
+  description: 'Hire a WiFi device in the UK — pocket MiFi, mobile hotspot, or 4G/5G home router. No contracts, no engineers, no landline needed. Temporary broadband from £5.50/day. Free delivery and returns.',
   alternates: { canonical: 'https://www.flexiwifi.co.uk' },
   openGraph: {
     title: 'WiFi Hire UK | Portable & Home Router Rental | FlexiWiFi',
@@ -70,6 +70,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Is the data truly unlimited?', acceptedAnswer: { '@type': 'Answer', text: 'Yes! All our plans include genuinely unlimited data with no fair usage caps or throttling.' } },
         { '@type': 'Question', name: 'How do I return the device?', acceptedAnswer: { '@type': 'Answer', text: 'Simply pop the device back in the original packaging and drop it to your local Evri dropoff. Returns are completely free.' } },
         { '@type': 'Question', name: 'Do I need a landline or engineer visit?', acceptedAnswer: { '@type': 'Answer', text: 'No. Our devices use 4G/5G mobile networks, so there\'s no need for a landline or any installation.' } },
+        { '@type': 'Question', name: "What's the difference between a MiFi, a dongle, and a hotspot?", acceptedAnswer: { '@type': 'Answer', text: "They all use a mobile network to get you online, but in different ways. A dongle plugs into a single laptop. A MiFi (or pocket WiFi) creates its own WiFi network for multiple devices. A hotspot usually means sharing your phone's connection. Our Pocket MiFi is a dedicated device — stronger signal, longer battery life, and no drain on your phone." } },
       ],
     },
   ],

@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer";
 
 export const metadata = {
   title: 'Temporary Broadband UK | No Contract WiFi While You Wait | FlexiWiFi',
-  description: 'Need temporary broadband while waiting for fibre or a new line? Hire a WiFi device from £5.50/day. No contracts, no engineers. Cancel anytime.',
+  description: 'Need temporary broadband or a mobile broadband alternative while waiting for fibre? Hire a WiFi device from £5.50/day. No contract internet, no engineers. Cancel anytime.',
   alternates: { canonical: 'https://www.flexiwifi.co.uk/temporary-broadband-uk' },
   openGraph: {
     title: 'Temporary Broadband UK | No Contract WiFi While You Wait | FlexiWiFi',
@@ -54,10 +54,10 @@ export default function TemporaryBroadbandPage() {
                 Internet today. No 12-month contract.
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                Hire a WiFi device, have it delivered in 2 days, and be online within minutes of it arriving. No engineer visits, no long contracts, no hassle.
+                The simplest mobile broadband alternative for when you're stuck without a connection. Hire a WiFi device, have it delivered in 2 days, and be online within minutes of it arriving. No contract internet, no engineer visits, no hassle.
               </p>
               <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-10">
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>From £5.50/day</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>£5.50/day, down to £3.00 for longer hires</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>Unlimited data</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>No contract</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>Return any time</span></div>
@@ -156,7 +156,7 @@ export default function TemporaryBroadbandPage() {
           <div className="grid sm:grid-cols-2 gap-6">
             <div className="bg-card border border-border rounded-2xl p-6">
               <h3 className="font-semibold text-foreground text-lg mb-1">Pocket MiFi</h3>
-              <p className="text-sm text-muted-foreground mb-4">From £5.50/day</p>
+              <p className="text-sm text-muted-foreground mb-4">£5.50/day, down to £3.00 for longer hires</p>
               <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                 {["Up to 10 devices", "4G speeds", "Battery powered", "Compact and portable", "Unlimited data"].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-4 h-4 text-accent flex-shrink-0" />{f}</li>
@@ -169,7 +169,7 @@ export default function TemporaryBroadbandPage() {
             <div className="bg-card border-2 border-primary rounded-2xl p-6 relative">
               <div className="absolute -top-3 left-6 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">Best for broadband replacement</div>
               <h3 className="font-semibold text-foreground text-lg mb-1">Home Router</h3>
-              <p className="text-sm text-muted-foreground mb-4">From £7.00/day</p>
+              <p className="text-sm text-muted-foreground mb-4">£7.00/day, down to £4.00 for longer hires</p>
               <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                 {["64+ simultaneous devices", "4G & 5G", "Ethernet port", "Whole-home coverage", "Unlimited data"].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-4 h-4 text-accent flex-shrink-0" />{f}</li>

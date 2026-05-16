@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer";
 
 export const metadata = {
   title: 'WiFi Hire for Tourists Visiting the UK | Portable Internet | FlexiWiFi',
-  description: 'Visiting the UK? Hire a portable WiFi device delivered to your hotel or address. Unlimited data, no roaming charges. From £5.50/day. Free returns.',
+  description: 'Visiting the UK? Hire a pocket WiFi for tourists — MiFi device delivered to your hotel or address. Unlimited data, no roaming charges. From £5.50/day. Free returns.',
   alternates: { canonical: 'https://www.flexiwifi.co.uk/wifi-hire-visiting-uk' },
   openGraph: {
     title: 'WiFi Hire for Tourists Visiting the UK | Portable Internet | FlexiWiFi',
@@ -54,7 +54,7 @@ export default function VisitingUKPage() {
                 Explore the UK without the roaming bill
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                Hire a pocket WiFi device delivered straight to your hotel, Airbnb, or wherever you're staying. Unlimited UK data, no roaming charges, free returns before you fly home.
+                Hire a pocket WiFi for tourists — a dedicated MiFi device delivered straight to your hotel, Airbnb, or wherever you're staying in the UK. Unlimited data, no roaming charges, free returns before you fly home.
               </p>
               <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-10">
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>No roaming fees</span></div>

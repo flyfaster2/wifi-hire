@@ -60,7 +60,7 @@ export default function RemoteWorkingPage() {
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>Unlimited data</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>4G & 5G speeds</span></div>
                 <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>No contracts</span></div>
-                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>From £5.50/day</span></div>
+                <div className="flex items-center gap-2"><Check className="w-4 h-4 text-accent" /><span>£5.50/day, down to £3.00 for longer hires</span></div>
               </div>
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-10">
                 <Link href="/book">
@@ -122,7 +122,7 @@ export default function RemoteWorkingPage() {
             <div className="bg-background border-2 border-primary rounded-2xl p-6 relative">
               <div className="absolute -top-3 left-6 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">On the move</div>
               <h3 className="font-semibold text-foreground text-lg mb-1">Pocket MiFi</h3>
-              <p className="text-sm text-muted-foreground mb-4">From £5.50/day</p>
+              <p className="text-sm text-muted-foreground mb-4">£5.50/day, down to £3.00 for longer hires</p>
               <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                 {["Up to 10 devices", "Battery powered — 10 hours", "Works anywhere in the UK", "Fits in your pocket", "Unlimited data"].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-4 h-4 text-accent flex-shrink-0" />{f}</li>
@@ -135,7 +135,7 @@ export default function RemoteWorkingPage() {
             <div className="bg-background border-2 border-primary rounded-2xl p-6 relative">
               <div className="absolute -top-3 left-6 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">Fixed location</div>
               <h3 className="font-semibold text-foreground text-lg mb-1">Home Router</h3>
-              <p className="text-sm text-muted-foreground mb-4">From £7.00/day</p>
+              <p className="text-sm text-muted-foreground mb-4">£7.00/day, down to £4.00 for longer hires</p>
               <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                 {["64+ simultaneous devices", "4G & 5G", "Ethernet port for wired connection", "Strong indoor signal", "Unlimited data"].map(f => (
                   <li key={f} className="flex items-center gap-2"><Check className="w-4 h-4 text-accent flex-shrink-0" />{f}</li>

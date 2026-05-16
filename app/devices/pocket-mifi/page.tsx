@@ -59,12 +59,12 @@ const highlights = [
 ];
 
 export const metadata = {
-  title: 'Pocket MiFi Hire UK | Portable WiFi Rental | FlexiWiFi',
-  description: 'Hire a pocket MiFi in the UK from £5.50/day. Unlimited data, 10-hour battery, connects up to 10 devices. No contracts. Fast delivery, free returns.',
+  title: 'Pocket MiFi Hire UK | Portable WiFi Hotspot Rental | FlexiWiFi',
+  description: 'Hire a pocket MiFi or portable WiFi hotspot in the UK from £5.50/day. 4G WiFi device with unlimited data, 10-hour battery, connects up to 10 devices. No contracts. Fast delivery, free returns.',
   alternates: { canonical: 'https://www.flexiwifi.co.uk/devices/pocket-mifi' },
   openGraph: {
-    title: 'Pocket MiFi Hire UK | Portable WiFi Rental | FlexiWiFi',
-    description: 'Hire a pocket MiFi in the UK from £5.50/day. Unlimited data, 10-hour battery, connects up to 10 devices. No contracts.',
+    title: 'Pocket MiFi Hire UK | Portable WiFi Hotspot Rental | FlexiWiFi',
+    description: 'Hire a pocket MiFi or portable WiFi hotspot in the UK from £5.50/day. 4G WiFi device with unlimited data, 10-hour battery, up to 10 devices. No contracts.',
     url: 'https://www.flexiwifi.co.uk/devices/pocket-mifi',
   },
 }
@@ -114,11 +114,11 @@ export default function PocketMiFiPage() {
                 Pocket MiFi
               </h1>
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                Compact dual-band 4G mobile hotspot. Fits in your pocket, connects up to 10 devices, and lasts all day on a single charge.
+                Compact dual-band 4G mobile hotspot. Fits in your pocket, connects up to 10 devices, and lasts all day on a single charge. Often called a pocket WiFi, personal hotspot, or MiFi — it's a dedicated device that does one job and does it well.
               </p>
               <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-3xl font-semibold text-foreground">From £5.50</span>
-                <span className="text-muted-foreground">/day</span>
+                <span className="text-3xl font-semibold text-foreground">£5.50/day</span>
+                <span className="text-sm text-muted-foreground">down to £3.00 for longer hires</span>
               </div>
               <div className="flex gap-3">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">

@@ -53,6 +53,11 @@ const faqs = [
     answer:
       "Unlike cheaper alternatives, we send out premium devices — the same hardware used by businesses. These devices have better antennas and therefore offer better signal and faster speeds to our customers. The deposit protects us against loss or damage, and it's fully refunded as soon as the device is returned safely.",
   },
+  {
+    question: "What's the difference between a MiFi, a dongle, and a hotspot?",
+    answer:
+      "They all do a similar thing — use a mobile network to get you online — but in different ways. A dongle (or USB dongle) plugs directly into a single laptop and only works for that one device. A MiFi (or pocket WiFi) is a small battery-powered device that creates its own WiFi network, so multiple devices can connect at once — phones, laptops, tablets. A hotspot usually just refers to using your phone's mobile data to share a connection with other devices, though the term is sometimes used interchangeably with MiFi. Our Pocket MiFi is a dedicated device — stronger signal, longer battery life, and no drain on your phone.",
+  },
 ];
 
 export function FAQSection() {

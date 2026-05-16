@@ -64,12 +64,12 @@ const highlights = [
 ];
 
 export const metadata = {
-  title: 'Home Router Hire UK | 5G WiFi Rental | FlexiWiFi',
-  description: 'Hire a 5G home router in the UK from £7.00/day. Unlimited data, connects up to 64 devices, no landline needed. No contracts. Fast delivery, free returns.',
+  title: 'Home Router Hire UK | 4G 5G WiFi Rental | No Landline Needed | FlexiWiFi',
+  description: 'Hire a 4G/5G home router in the UK from £7.00/day. Temporary home WiFi with no landline required. Cellular router, unlimited data, 64+ devices. No contracts. Fast delivery, free returns.',
   alternates: { canonical: 'https://www.flexiwifi.co.uk/devices/home-router' },
   openGraph: {
-    title: 'Home Router Hire UK | 5G WiFi Rental | FlexiWiFi',
-    description: 'Hire a 5G home router in the UK from £7.00/day. Unlimited data, connects up to 64 devices, no landline needed. No contracts.',
+    title: 'Home Router Hire UK | 4G 5G WiFi Rental | No Landline Needed | FlexiWiFi',
+    description: 'Hire a 4G/5G home router in the UK from £7.00/day. Temporary home WiFi, no landline required. Unlimited data, 64+ devices. No contracts.',
     url: 'https://www.flexiwifi.co.uk/devices/home-router',
   },
 }
@@ -119,11 +119,11 @@ export default function HomeRouterPage() {
                 Home Router
               </h1>
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                5G/4G indoor router with Wi-Fi 6 and four external antennas. Plug it in and connect your entire household — no landline, no engineer, no contracts.
+                4G/5G cellular router with Wi-Fi 6 and four external antennas. Plug it in and connect your entire household — no landline required, no engineer, no contracts. The ideal temporary home internet solution while you wait for fibre or settle into a new place.
               </p>
               <div className="flex items-baseline gap-2 mb-8">
-                <span className="text-3xl font-semibold text-foreground">From £7.00</span>
-                <span className="text-muted-foreground">/day</span>
+                <span className="text-3xl font-semibold text-foreground">£7.00/day</span>
+                <span className="text-sm text-muted-foreground">down to £4.00 for longer hires</span>
               </div>
               <div className="flex gap-3">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -185,7 +185,7 @@ export default function HomeRouterPage() {
           <div className="bg-secondary/60 rounded-2xl px-6 py-5">
             <h2 className="font-semibold text-foreground mb-2">Coverage in your area</h2>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Our home router supports 4G and 5G across the UK. Before dispatch, we check coverage at your delivery postcode and select the best SIM for your area to ensure you get the strongest possible signal. In 4G-only areas the router falls back gracefully and still delivers excellent speeds.
+              Our 4G/5G cellular router works across the UK without a landline or phone socket. Before dispatch, we check coverage at your delivery postcode and select the best SIM for your area to ensure you get the strongest possible signal. In 4G-only areas the router falls back gracefully and still delivers excellent speeds for streaming, calls, and working from home.
             </p>
           </div>
         </div>
