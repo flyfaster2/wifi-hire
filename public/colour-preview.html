@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colour Options</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; background: #f0f0f0; padding: 32px; }
+  h1 { font-size: 14px; color: #666; margin-bottom: 24px; letter-spacing: 0.05em; text-transform: uppercase; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+  .card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  .hero {
+    padding: 28px 24px 24px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 99px;
+    margin-bottom: 14px;
+  }
+
+  .heading {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #111;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+  }
+
+  .sub {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 20px;
+  }
+
+  .divider { height: 1px; background: #eee; margin: 0 24px; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 20px 24px;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
+
+  .stat-label { font-size: 12px; font-weight: 600; color: #111; }
+  .stat-sub { font-size: 11px; color: #888; }
+
+  .label {
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* OPTION 1 — Current: Terracotta */
+  .opt1 .badge { background: rgba(180,80,40,0.1); color: #b45028; }
+  .opt1 .btn { background: #b45028; }
+  .opt1 .stat-icon { background: rgba(180,80,40,0.1); }
+  .opt1 .stat-icon span { color: #b45028; }
+  .opt1 .label { color: #b45028; background: rgba(180,80,40,0.06); }
+
+  /* OPTION 2 — Signal Blue */
+  .opt2 .badge { background: rgba(37,99,235,0.1); color: #2563eb; }
+  .opt2 .btn { background: #2563eb; }
+  .opt2 .stat-icon { background: rgba(37,99,235,0.1); }
+  .opt2 .stat-icon span { color: #2563eb; }
+  .opt2 .label { color: #2563eb; background: rgba(37,99,235,0.06); }
+
+  /* OPTION 3 — Teal */
+  .opt3 .badge { background: rgba(13,148,136,0.1); color: #0d9488; }
+  .opt3 .btn { background: #0d9488; }
+  .opt3 .stat-icon { background: rgba(13,148,136,0.1); }
+  .opt3 .stat-icon span { color: #0d9488; }
+  .opt3 .label { color: #0d9488; background: rgba(13,148,136,0.06); }
+
+  /* OPTION 4 — Indigo/Purple */
+  .opt4 .badge { background: rgba(99,60,200,0.1); color: #633cc8; }
+  .opt4 .btn { background: #633cc8; }
+  .opt4 .stat-icon { background: rgba(99,60,200,0.1); }
+  .opt4 .stat-icon span { color: #633cc8; }
+  .opt4 .label { color: #633cc8; background: rgba(99,60,200,0.06); }
+</style>
+</head>
+<body>
+  <h1>FlexiWiFi — Accent Colour Options</h1>
+  <div class="grid">
+
+    <!-- Option 1: Current -->
+    <div class="card opt1">
+      <div class="hero">
+        <div class="badge">📶 FlexiWiFi</div>
+        <div class="heading">WiFi hire, delivered to your door</div>
+        <div class="sub">No contracts, no engineer. Online within minutes of it arriving.</div>
+        <button class="btn">Order Now →</button>
+      </div>
+      <div class="divider"></div>
+      <div class="stats">
+        <div><div class="stat-icon"><span>⚡</span></div><div class="stat-label">£5.50/day</div><div class="stat-sub">From</div></div>
+        <div><div class="stat-icon"><span>📡</span></div><div class="stat-label">4G & 5G</div><div class="stat-sub">Nationwide</div></div>
+        <div><div class="stat-icon"><span>∞</span></div><div class="stat-label">Unlimited</div><div class="stat-sub">Data</div></div>
+        <div><div class="stat-icon"><span>↩</span></div><div class="stat-label">Free returns</div><div class="stat-sub">Always</div></div>
+      </div>
+      <div class="label">Current — Terracotta</div>
+    </div>
+
+    <!-- Option 2: Signal Blue -->
+    <div class="card opt2">
+      <div class="hero">
+        <div class="badge">📶 FlexiWiFi</div>
+        <div class="heading">WiFi hire, delivered to your door</div>
+        <div class="sub">No contracts, no engineer. Online within minutes of it arriving.</div>
+        <button class="btn">Order Now →</button>
+      </div>
+      <div class="divider"></div>
+      <div class="stats">
+        <div><div class="stat-icon"><span>⚡</span></div><div class="stat-label">£5.50/day</div><div class="stat-sub">From</div></div>
+        <div><div class="stat-icon"><span>📡</span></div><div class="stat-label">4G & 5G</div><div class="stat-sub">Nationwide</div></div>
+        <div><div class="stat-icon"><span>∞</span></div><div class="stat-label">Unlimited</div><div class="stat-sub">Data</div></div>
+        <div><div class="stat-icon"><span>↩</span></div><div class="stat-label">Free returns</div><div class="stat-sub">Always</div></div>
+      </div>
+      <div class="label">Option 2 — Signal Blue</div>
+    </div>
+
+    <!-- Option 3: Teal -->
+    <div class="card opt3">
+      <div class="hero">
+        <div class="badge">📶 FlexiWiFi</div>
+        <div class="heading">WiFi hire, delivered to your door</div>
+        <div class="sub">No contracts, no engineer. Online within minutes of it arriving.</div>
+        <button class="btn">Order Now →</button>
+      </div>
+      <div class="divider"></div>
+      <div class="stats">
+        <div><div class="stat-icon"><span>⚡</span></div><div class="stat-label">£5.50/day</div><div class="stat-sub">From</div></div>
+        <div><div class="stat-icon"><span>📡</span></div><div class="stat-label">4G & 5G</div><div class="stat-sub">Nationwide</div></div>
+        <div><div class="stat-icon"><span>∞</span></div><div class="stat-label">Unlimited</div><div class="stat-sub">Data</div></div>
+        <div><div class="stat-icon"><span>↩</span></div><div class="stat-label">Free returns</div><div class="stat-sub">Always</div></div>
+      </div>
+      <div class="label">Option 3 — Teal</div>
+    </div>
+
+    <!-- Option 4: Indigo -->
+    <div class="card opt4">
+      <div class="hero">
+        <div class="badge">📶 FlexiWiFi</div>
+        <div class="heading">WiFi hire, delivered to your door</div>
+        <div class="sub">No contracts, no engineer. Online within minutes of it arriving.</div>
+        <button class="btn">Order Now →</button>
+      </div>
+      <div class="divider"></div>
+      <div class="stats">
+        <div><div class="stat-icon"><span>⚡</span></div><div class="stat-label">£5.50/day</div><div class="stat-sub">From</div></div>
+        <div><div class="stat-icon"><span>📡</span></div><div class="stat-label">4G & 5G</div><div class="stat-sub">Nationwide</div></div>
+        <div><div class="stat-icon"><span>∞</span></div><div class="stat-label">Unlimited</div><div class="stat-sub">Data</div></div>
+        <div><div class="stat-icon"><span>↩</span></div><div class="stat-label">Free returns</div><div class="stat-sub">Always</div></div>
+      </div>
+      <div class="label">Option 4 — Indigo</div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -11,13 +11,11 @@ export function HeroSection() {
           {/* Text Content */}
           <div className="text-center lg:text-left">
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-foreground leading-tight text-balance">
-              Instant WiFi,{" "}
-              <span className="text-accent">wherever you need it</span>
+              WiFi device hire,{" "}
+              <span className="text-accent">delivered to your door.</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Rent a WiFi device in seconds. Flexible rental. No contracts, no
-              engineers, no fuss. Just reliable internet delivered to your
-              door.
+              Whether you're moving house, waiting for broadband, or just need reliable internet — choose your device, pick your dates, and we'll handle the rest. Unlimited data, free returns, no commitment.
             </p>
 
             {/* Trust Badges */}

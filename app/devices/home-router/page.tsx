@@ -58,9 +58,9 @@ const specs = [
 
 const highlights = [
   { icon: Wifi, label: "Wi-Fi 6", sub: "802.11ax dual-band" },
-  { icon: Router, label: "32+ devices", sub: "Connect simultaneously" },
+  { icon: Router, label: "64+ devices", sub: "Connect simultaneously" },
   { icon: Zap, label: "2.5 Gbps", sub: "Peak 5G download" },
-  { icon: Signal, label: "4G & 5G", sub: "With 4G fallback" },
+  { icon: Signal, label: "5G capable", sub: "With 4G fallback" },
 ];
 
 export const metadata = {

@@ -7,7 +7,9 @@
       "Bash(pnpm add *)",
       "Bash(Copy-Item \"C:\\\\Users\\\\billy\\\\OneDrive\\\\Documents\\\\GitHub\\\\wifi-hire\\\\images\\\\pocket-mifi.jpg\" -Destination \"C:\\\\Users\\\\billy\\\\OneDrive\\\\Documents\\\\GitHub\\\\wifi-hire\\\\public\\\\images\\\\pocket-mifi.jpg\" -Force)",
       "PowerShell(Copy-Item \"C:\\\\Users\\\\billy\\\\OneDrive\\\\Documents\\\\GitHub\\\\wifi-hire\\\\images\\\\pocket-mifi.png\" \"C:\\\\Users\\\\billy\\\\OneDrive\\\\Documents\\\\GitHub\\\\wifi-hire\\\\public\\\\images\\\\pocket-mifi.png\" -Force)",
-      "WebFetch(domain:www.wifihire.co.uk)"
+      "WebFetch(domain:www.wifihire.co.uk)",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_in_Chrome__tabs_context_mcp"
     ]
   }
 }
