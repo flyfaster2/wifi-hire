@@ -18,7 +18,6 @@ const specs = [
       { label: "5G frequency bands", value: "n1, n3, n28, n41, n77, n78" },
       { label: "LTE frequency bands", value: "B1, B3, B5, B7, B8, B20, B28, B32, B38, B40, B41, B42, B43" },
       { label: "SIM type", value: "Nano SIM (4FF)" },
-      { label: "External antennas", value: "4 × TS-9 antenna ports" },
     ],
   },
   {
@@ -48,7 +47,6 @@ const specs = [
     items: [
       { label: "Dimensions", value: "223 × 170 × 168 mm" },
       { label: "Weight", value: "Approx. 1.5 kg" },
-      { label: "External antennas", value: "2 × 5G cellular, 2 × Wi-Fi" },
       { label: "Operating temperature", value: "0°C to 40°C" },
       { label: "Storage temperature", value: "-20°C to 70°C" },
       { label: "Operating humidity", value: "10% to 90% (non-condensing)" },
@@ -119,7 +117,7 @@ export default function HomeRouterPage() {
                 Home Router
               </h1>
               <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                4G/5G cellular router with Wi-Fi 6 and four external antennas. Plug it in and connect your entire household — no landline required, no engineer, no contracts. The ideal temporary home internet solution while you wait for fibre or settle into a new place.
+                4G/5G cellular router with Wi-Fi 6. Plug it in and connect your entire household — no landline required, no engineer, no contracts. The ideal temporary home internet solution while you wait for fibre or settle into a new place.
               </p>
               <div className="flex items-baseline gap-2 mb-8">
                 <span className="text-3xl font-semibold text-foreground">£7.00/day</span>
@@ -235,7 +233,6 @@ export default function HomeRouterPage() {
               "Home router, pre-configured and ready to use",
               "SIM card with unlimited UK data",
               "Power adapter (UK plug)",
-              "4 external antennas (pre-attached)",
               "Ethernet cable",
               "Quick-start guide",
               "Prepaid freepost return envelope",
