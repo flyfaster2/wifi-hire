@@ -53,6 +53,9 @@ interface BookingFormProps {
     days: number
     deliveryCost: number
     customer: CustomerDetails
+    hearAboutUs: string
+    hearAboutUsOther?: string
+    purposeOfHire: string
   }) => void
   isLoading?: boolean
 }
@@ -62,6 +65,9 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
   const [startDate, setStartDate] = useState<string>('')
   const [endDate, setEndDate] = useState<string>('')
   const [agreedToTerms, setAgreedToTerms] = useState(false)
+  const [hearAboutUs, setHearAboutUs] = useState('')
+  const [hearAboutUsOther, setHearAboutUsOther] = useState('')
+  const [purposeOfHire, setPurposeOfHire] = useState('')
   const [customer, setCustomer] = useState<CustomerDetails>({
     name: '',
     email: '',
@@ -115,7 +121,7 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
     customer.city.trim() &&
     customer.postcode.trim()
 
-  const canSubmit = datesComplete && customerComplete && agreedToTerms && !isLoading
+  const canSubmit = datesComplete && customerComplete && hearAboutUs && purposeOfHire && agreedToTerms && !isLoading
 
   const setField = (field: keyof CustomerDetails) => (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = field === 'postcode' ? e.target.value.toUpperCase() : e.target.value
@@ -128,11 +134,11 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
       setEndDate('')
       return
     }
-    const d = new Date(value + 'T00:00:00')
-    const day = d.getDay()
-    let corrected = value
-    if (day === 6) corrected = format(addDays(d, 2), 'yyyy-MM-dd')
-    else if (day === 0) corrected = format(addDays(d, 1), 'yyyy-MM-dd')
+    // Clamp to minimum delivery date first, then skip any weekends
+    let d = new Date(value + 'T00:00:00')
+    if (d < deliveryInfo.minDeliveryDate) d = new Date(deliveryInfo.minDeliveryDate)
+    d = toNextWeekday(d)
+    const corrected = format(d, 'yyyy-MM-dd')
     setStartDate(corrected)
     if (endDate && corrected > endDate) setEndDate('')
   }
@@ -146,6 +152,9 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
       days: rentalDays,
       deliveryCost,
       customer,
+      hearAboutUs,
+      hearAboutUsOther: hearAboutUs === 'Other' ? hearAboutUsOther : undefined,
+      purposeOfHire,
     })
   }
 
@@ -345,11 +354,66 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
         </div>
       )}
 
-      {/* Step 4: Review & Pay */}
-      {pricing && selectedDeviceData && customerComplete && (
+      {/* Step 4: A couple of quick questions */}
+      {datesComplete && customerComplete && (
         <div className="space-y-4">
           <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
             <span className="flex items-center justify-center w-7 h-7 rounded-full bg-primary text-primary-foreground text-sm font-bold">4</span>
+            A couple of quick questions
+          </h3>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-foreground">What do you need it for?</label>
+              <select
+                value={purposeOfHire}
+                onChange={(e) => setPurposeOfHire(e.target.value)}
+                className={inputClass}
+              >
+                <option value="">Select an option</option>
+                <option value="Moving house">Moving house</option>
+                <option value="Waiting for broadband / fibre">Waiting for broadband / fibre</option>
+                <option value="Visiting the UK">Visiting the UK</option>
+                <option value="Remote working / working from home">Remote working / working from home</option>
+                <option value="Short-term let / Airbnb host">Short-term let / Airbnb host</option>
+                <option value="Broadband outage or fault">Broadband outage or fault</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-foreground">How did you hear about us?</label>
+              <select
+                value={hearAboutUs}
+                onChange={(e) => { setHearAboutUs(e.target.value); setHearAboutUsOther('') }}
+                className={inputClass}
+              >
+                <option value="">Select an option</option>
+                <option value="Google search">Google search</option>
+                <option value="Recommended by a friend">Recommended by a friend</option>
+                <option value="Social media">Social media</option>
+                <option value="Saw an advert">Saw an advert</option>
+                <option value="Other">Other</option>
+              </select>
+              {hearAboutUs === 'Other' && (
+                <input
+                  type="text"
+                  placeholder="Please tell us more..."
+                  value={hearAboutUsOther}
+                  onChange={(e) => setHearAboutUsOther(e.target.value)}
+                  className={inputClass}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Step 5: Review & Pay */}
+      {pricing && selectedDeviceData && customerComplete && hearAboutUs && purposeOfHire && (
+        <div className="space-y-4">
+          <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
+            <span className="flex items-center justify-center w-7 h-7 rounded-full bg-primary text-primary-foreground text-sm font-bold">5</span>
             Review your order
           </h3>
           <Card className="border-2 border-accent/20">

@@ -20,6 +20,9 @@ export interface RentalBooking {
   days: number
   deliveryCost: number
   customer: CustomerDetails
+  hearAboutUs: string
+  hearAboutUsOther?: string
+  purposeOfHire: string
 }
 
 export async function createRentalCheckoutSession(booking: RentalBooking) {
@@ -46,17 +49,30 @@ export async function createRentalCheckoutSession(booking: RentalBooking) {
     customer.postcode,
   ].filter(Boolean)
 
+  const stripeCustomer = await stripe.customers.create({
+    name: customer.name,
+    email: customer.email,
+    phone: customer.phone,
+    address: {
+      line1: customer.addressLine1,
+      line2: customer.addressLine2 || undefined,
+      city: customer.city,
+      postal_code: customer.postcode,
+      country: 'GB',
+    },
+  })
+
   const session = await stripe.checkout.sessions.create({
     ui_mode: 'embedded_page',
     redirect_on_completion: 'never',
-    customer_email: customer.email,
+    customer: stripeCustomer.id,
     line_items: [
       {
         price_data: {
           currency: 'gbp',
           product_data: {
             name: `${device.name} Rental (${booking.days} days)`,
-            description: `Rental period: ${booking.startDate} to ${booking.endDate}`,
+            description: `Delivery: ${booking.startDate} — Return by: ${booking.endDate} | Customer: ${customer.name} | ${customer.phone} | ${customer.email} | Address: ${addressParts.join(', ')}`,
           },
           unit_amount: rentalPricePence,
         },
@@ -109,8 +125,11 @@ export async function createRentalCheckoutSession(booking: RentalBooking) {
       depositPence: depositPence.toString(),
       deliveryCost: deliveryCost.toString(),
       customerName: customer.name,
+      customerEmail: customer.email,
       customerPhone: customer.phone,
       deliveryAddress: addressParts.join(', '),
+      hearAboutUs: booking.hearAboutUsOther ? `${booking.hearAboutUs}: ${booking.hearAboutUsOther}` : booking.hearAboutUs,
+      purposeOfHire: booking.purposeOfHire,
     },
   })
 

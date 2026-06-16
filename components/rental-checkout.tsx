@@ -8,6 +8,7 @@ import {
 } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
 import { createRentalCheckoutSession, type RentalBooking } from '@/app/actions/stripe'
+import { sendOrderNotification } from '@/app/actions/notify'
 import { Card, CardContent } from '@/components/ui/card'
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
@@ -89,7 +90,7 @@ export function RentalCheckout({ booking }: RentalCheckoutProps) {
     <div id="checkout" className="rounded-lg overflow-hidden" style={{ backgroundColor: 'oklch(0.975 0.005 80)' }}>
       <EmbeddedCheckoutProvider
         stripe={stripePromise}
-        options={{ fetchClientSecret, onComplete: () => setPaymentComplete(true) }}
+        options={{ fetchClientSecret, onComplete: () => { sendOrderNotification(booking); setPaymentComplete(true) } }}
       >
         <EmbeddedCheckout />
       </EmbeddedCheckoutProvider>
