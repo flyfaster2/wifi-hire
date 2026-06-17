@@ -10,11 +10,8 @@ interface Props {
 export default async function RefundAdminPage({ searchParams }: Props) {
   const { token } = await searchParams
 
-  const envSet = !!process.env.ADMIN_TOKEN
-  const match = token === process.env.ADMIN_TOKEN
-
-  if (!match) {
-    return <pre style={{padding:32}}>debug: token_received={token ? 'yes' : 'no'} env_set={String(envSet)} match={String(match)}</pre>
+  if (!token || token !== process.env.ADMIN_TOKEN) {
+    notFound()
   }
 
   return (
