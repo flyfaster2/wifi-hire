@@ -32,7 +32,8 @@
       "Bash(bash scripts/init-artifact.sh flexiwifi-email)",
       "Bash(bash scripts/bundle-artifact.sh flexiwifi-email)",
       "Bash(bash ../scripts/bundle-artifact.sh)",
-      "Bash(pnpm approve-builds *)"
+      "Bash(pnpm approve-builds *)",
+      "Bash(git commit *)"
     ]
   }
 }
