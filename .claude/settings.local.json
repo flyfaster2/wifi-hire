@@ -11,7 +11,28 @@
       "mcp__Claude_Preview__preview_start",
       "mcp__Claude_in_Chrome__tabs_context_mcp",
       "WebSearch",
-      "WebFetch(domain:www.spyfu.com)"
+      "WebFetch(domain:www.spyfu.com)",
+      "WebFetch(domain:www.flexiwifi.co.uk)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "Bash(mkdir -p .claude/commands)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(python -c \"from PIL import Image; print\\('PIL ok'\\)\")",
+      "Bash(py --version)",
+      "Bash(where python*)",
+      "Bash(npm --version)",
+      "Bash(node -e \"const {createCanvas} = require\\('canvas'\\); console.log\\('canvas ok'\\)\")",
+      "Bash(cp \"C:\\\\Users\\\\billy\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\9e4f8b52-4e9b-448a-82b6-94ab17fb4848\\\\a6fbbf47-de7c-473b-9b99-db4145a89412\\\\skills\\\\canvas-design\\\\canvas-fonts\\\\InstrumentSans-Regular.ttf\" \"C:\\\\Users\\\\billy\\\\AppData\\\\Local\\\\Temp\\\\logo-gen\\\\ISans-Regular.ttf\")",
+      "Bash(cp \"C:\\\\Users\\\\billy\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\9e4f8b52-4e9b-448a-82b6-94ab17fb4848\\\\a6fbbf47-de7c-473b-9b99-db4145a89412\\\\skills\\\\canvas-design\\\\canvas-fonts\\\\InstrumentSans-Bold.ttf\" \"C:\\\\Users\\\\billy\\\\AppData\\\\Local\\\\Temp\\\\logo-gen\\\\ISans-Bold.ttf\")",
+      "Bash(cp \"C:\\\\Users\\\\billy\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\9e4f8b52-4e9b-448a-82b6-94ab17fb4848\\\\a6fbbf47-de7c-473b-9b99-db4145a89412\\\\skills\\\\canvas-design\\\\canvas-fonts\\\\Jura-Light.ttf\" \"C:\\\\Users\\\\billy\\\\AppData\\\\Local\\\\Temp\\\\logo-gen\\\\Jura-Light.ttf\")",
+      "Bash(node gen.js)",
+      "Read(//c/Users/billy/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/9e4f8b52-4e9b-448a-82b6-94ab17fb4848/a6fbbf47-de7c-473b-9b99-db4145a89412/skills/web-artifacts-builder/**)",
+      "Bash(bash scripts/init-artifact.sh flexiwifi-email)",
+      "Bash(bash scripts/bundle-artifact.sh flexiwifi-email)",
+      "Bash(bash ../scripts/bundle-artifact.sh)",
+      "Bash(pnpm approve-builds *)"
     ]
   }
 }

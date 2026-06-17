@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FlexiWiFi — Order Confirmation Email Preview</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #efefef;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    padding: 48px 16px;
+    min-height: 100vh;
+  }
+  .email {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+  }
+
+  /* Header */
+  .header {
+    background: #111;
+    padding: 26px 40px;
+    text-align: center;
+  }
+  .header-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.2px;
+  }
+  .header-url {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    margin-top: 3px;
+    letter-spacing: 0.4px;
+  }
+
+  /* Body */
+  .body { padding: 40px 40px 32px; }
+
+  /* Hero */
+  .hero { text-align: center; margin-bottom: 34px; }
+  .tick-circle {
+    width: 50px; height: 50px; border-radius: 50%;
+    background: #f2f2f2;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+  }
+  .hero h1 {
+    font-size: 21px; font-weight: 600; color: #111;
+    letter-spacing: -0.2px; margin-bottom: 8px;
+  }
+  .hero p { font-size: 14px; color: #666; line-height: 1.65; }
+
+  /* Summary */
+  .summary {
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+  .summary-header {
+    background: #f8f8f8;
+    padding: 9px 20px;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 10px; font-weight: 700;
+    color: #aaa; text-transform: uppercase; letter-spacing: 0.9px;
+  }
+  .summary-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .summary-row:last-child { border-bottom: none; }
+  .summary-label { font-size: 13px; color: #999; }
+  .summary-value {
+    font-size: 13px; font-weight: 500; color: #111;
+    text-align: right; max-width: 55%;
+  }
+
+  /* Next steps */
+  .section-label {
+    font-size: 10px; font-weight: 700; color: #aaa;
+    text-transform: uppercase; letter-spacing: 0.9px;
+    margin-bottom: 12px;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .step {
+    border: 1px solid #e6e6e6; border-radius: 4px;
+    padding: 16px 12px; text-align: center;
+  }
+  .step-icon { margin-bottom: 10px; }
+  .step-title { font-size: 12px; font-weight: 600; color: #111; line-height: 1.4; margin-bottom: 5px; }
+  .step-body { font-size: 11px; color: #999; line-height: 1.5; }
+
+  /* Returns tip */
+  .tip {
+    background: #f6f6f6; border-radius: 4px;
+    padding: 15px 18px; margin-bottom: 30px;
+    font-size: 13px; color: #444; line-height: 1.7;
+  }
+  .tip strong { color: #111; }
+
+  /* CTA */
+  .cta { text-align: center; }
+  .cta p { font-size: 13px; color: #999; margin-bottom: 14px; }
+  .cta a {
+    display: inline-block; background: #111; color: #fff;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+    padding: 12px 30px; border-radius: 4px;
+  }
+  .cta a:hover { background: #333; }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid #ebebeb;
+    padding: 22px 40px; text-align: center;
+  }
+  .footer p { font-size: 11px; color: #bbb; line-height: 1.8; }
+  .footer p + p { color: #ccc; }
+</style>
+</head>
+<body>
+
+<div class="email">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-name">FlexiWiFi</div>
+    <div class="header-url">flexiwifi.co.uk</div>
+  </div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="tick-circle">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h1>Booking confirmed</h1>
+      <p>Hi Sarah, your WiFi device is on its way.<br>Here's everything you need to know.</p>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="summary">
+      <div class="summary-header">Order summary</div>
+      <div class="summary-row">
+        <span class="summary-label">Device</span>
+        <span class="summary-value">Pocket MiFi</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Delivery date</span>
+        <span class="summary-value">Mon 23 Jun 2026</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Return by</span>
+        <span class="summary-value">Mon 30 Jun 2026</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Delivering to</span>
+        <span class="summary-value">14 Oak Street, Bristol, BS1 4AB</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Total charged</span>
+        <span class="summary-value">£62.50</span>
+      </div>
+    </div>
+
+    <!-- What happens next -->
+    <div class="section-label">What happens next</div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+        </div>
+        <div class="step-title">We'll dispatch your device</div>
+        <div class="step-body">You'll receive it on your chosen delivery date.</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M2 8h20"/>
+          </svg>
+        </div>
+        <div class="step-title">Freepost return included</div>
+        <div class="step-body">A return envelope is in the box — drop it at any post box.</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+          </svg>
+        </div>
+        <div class="step-title">Deposit refunded</div>
+        <div class="step-body">Back in your account 3–5 working days after return.</div>
+      </div>
+    </div>
+
+    <!-- Returns tip -->
+    <div class="tip">
+      <strong>How returns work:</strong> A freepost envelope is included in your box. When you're done, pop the device in and drop it at any post box — no printer needed.
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <p>Any questions? We're happy to help.</p>
+      <a href="mailto:hello@flexiwifi.co.uk">Contact us</a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>FlexiWiFi · hello@flexiwifi.co.uk</p>
+    <p>You're receiving this because you placed an order at flexiwifi.co.uk</p>
+  </div>
+
+</div>
+
+</body>
+</html>
