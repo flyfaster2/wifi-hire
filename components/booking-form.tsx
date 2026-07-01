@@ -9,20 +9,6 @@ import { cn } from '@/lib/utils'
 import { RENTAL_DEVICES, calculateRentalPrice, formatPrice, type RentalDevice } from '@/lib/products'
 import type { CustomerDetails } from '@/app/actions/stripe'
 
-const BLOCKED_MONTHS = [{ year: 2026, month: 6 }] // month is 0-indexed (6 = July)
-
-function isBlockedMonth(date: Date): boolean {
-  return BLOCKED_MONTHS.some(b => date.getFullYear() === b.year && date.getMonth() === b.month)
-}
-
-function skipBlockedMonths(date: Date): Date {
-  let d = new Date(date)
-  while (isBlockedMonth(d)) {
-    d = new Date(d.getFullYear(), d.getMonth() + 1, 1)
-  }
-  return d
-}
-
 function toNextWeekday(date: Date): Date {
   const d = new Date(date)
   while (d.getDay() === 0 || d.getDay() === 6) {
@@ -42,7 +28,7 @@ function getDeliveryInfo() {
   const isWeekend = dayOfWeek === 0 || dayOfWeek === 6
   const isBeforeCutoff = hour < 14
 
-  const minDeliveryDate = skipBlockedMonths(nextWorkingDay(nextWorkingDay(now)))
+  const minDeliveryDate = nextWorkingDay(nextWorkingDay(now))
   const standardDate = minDeliveryDate
 
   let bannerState: 'before-cutoff' | 'after-cutoff' | 'weekend'
@@ -151,7 +137,6 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
     // Clamp to minimum delivery date first, then skip any weekends
     let d = new Date(value + 'T00:00:00')
     if (d < deliveryInfo.minDeliveryDate) d = new Date(deliveryInfo.minDeliveryDate)
-    d = skipBlockedMonths(d)
     d = toNextWeekday(d)
     const corrected = format(d, 'yyyy-MM-dd')
     setStartDate(corrected)
@@ -201,14 +186,6 @@ export function BookingForm({ onSubmit, isLoading }: BookingFormProps) {
           <span className="flex items-center justify-center w-7 h-7 rounded-full bg-primary text-primary-foreground text-sm font-bold">2</span>
           Select your rental dates
         </h3>
-
-        <div className="flex gap-3 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800 dark:border-red-800 dark:bg-red-950/40 dark:text-red-300">
-          <AlertTriangle className="h-4 w-4 mt-0.5 flex-shrink-0" />
-          <div>
-            <p className="font-semibold">Fully booked for July 2026</p>
-            <p className="mt-0.5 text-red-700 dark:text-red-400">We&apos;re not taking new orders for July. The earliest available delivery date is 1 August 2026.</p>
-          </div>
-        </div>
 
         {bannerState === 'before-cutoff' && nwdDate && (
           <div className="flex gap-3 rounded-lg border border-blue-200 bg-blue-50 p-4 text-sm text-blue-800 dark:border-blue-800 dark:bg-blue-950/40 dark:text-blue-300">
